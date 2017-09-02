@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MdToolbarModule } from '@angular/material';
@@ -14,10 +15,12 @@ const PIPES = [];
         AppComponent
     ],
     imports: [
-        BrowserModule,
+        BrowserModule, HttpModule,
         MD_COMPONENTS, DIRECTIVES, PIPES
     ],
-    providers: [],
+    providers: [
+        HttpModule
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
