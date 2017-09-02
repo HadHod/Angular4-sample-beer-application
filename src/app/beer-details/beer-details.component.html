@@ -1,0 +1,11 @@
+<div *ngIf="isInitialized">
+    <md-card class="beer-card">
+        <md-card-header class="beer-card__name">
+            <a>{{ beer.name }}</a>
+        </md-card-header>
+        <img md-card-image class="header-image" src="{{ beer.imageUrl }}">
+        <md-card-content>
+            <p>{{ beer.description }}</p>
+        </md-card-content>
+    </md-card>
+</div>

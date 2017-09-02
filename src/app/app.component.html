@@ -8,11 +8,15 @@
     <div>
         <md-list>
             <md-list-item *ngFor="let beer of beers" class="item-beer">
-                <img md-list-avatar [src]="beer.imageUrl" />
+                <img md-list-avatar [routerLink]="['/details/' + beer.id]" [src]="beer.imageUrl" />
                 <h4 md-line class="item-beer__name">{{ beer.name}}</h4>
                 <p md-line class="item-beer__decription">{{ beer.getShortDescription(35) }}</p>
             </md-list-item>
         </md-list>
+    </div>
+
+    <div>
+        <router-outlet></router-outlet>
     </div>
 
 </div>

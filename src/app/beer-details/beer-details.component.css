@@ -1,0 +1,20 @@
+.beer-card {
+    width: 400px;
+    height: 750px;
+    margin: 12px;
+    float: left;
+
+    position: fixed;
+    top: 72px;
+    right: 10px;
+}
+
+.beer-card .beer-card__name {
+    margin-bottom: 8px;
+}
+
+.header-image {
+    width: 300px;
+    height: 600px;
+    background-size: cover;
+}
