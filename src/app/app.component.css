@@ -1,0 +1,11 @@
+.item-beer {
+    cursor: pointer;
+}
+
+.item-beer .item-beer__name:hover {
+    text-decoration: underline;
+}
+
+.item-beer .item-beer__description {
+
+}

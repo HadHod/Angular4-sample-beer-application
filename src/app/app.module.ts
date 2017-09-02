@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MdToolbarModule } from '@angular/material';
+import { MdToolbarModule, MdProgressSpinnerModule, MdListModule } from '@angular/material';
 
 
-const MD_COMPONENTS = [MdToolbarModule];
+const MD_COMPONENTS = [MdToolbarModule, MdProgressSpinnerModule, MdListModule];
 const DIRECTIVES = [];
 const PIPES = [];
 

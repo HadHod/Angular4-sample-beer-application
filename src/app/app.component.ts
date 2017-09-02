@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Beer } from './app.model';
 import { BeerService } from './app.service';
@@ -10,7 +10,7 @@ import { BeerService } from './app.service';
     styleUrls: ['./app.component.css'],
     providers: [BeerService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     public beers: Beer[];
 
     public isInitialized: boolean = false;
@@ -18,5 +18,12 @@ export class AppComponent {
     constructor (
         private _beerService: BeerService
     ) {}
+
+    ngOnInit () {
+        this._beerService.getBeers().subscribe(b => {
+            this.beers = b;
+            this.isInitialized = true;
+        });
+    }
 
 }
